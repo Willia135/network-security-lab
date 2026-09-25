@@ -8,6 +8,55 @@ Todos os testes apresentados neste projeto foram realizados exclusivamente em am
 
 ---
 
+## 📌 Resumo do Projeto
+
+Laboratório prático de Segurança de Redes desenvolvido em ambiente virtualizado e isolado utilizando Kali Linux e Metasploitable 2.
+
+O projeto demonstra habilidades práticas em:
+
+- Descoberta de hosts;
+- Enumeração de portas e serviços;
+- Análise de tráfego com Wireshark;
+- Identificação de protocolos inseguros;
+- Análise de FTP, Telnet, SSH, HTTP, SMB e MySQL;
+- Validação de configurações inseguras;
+- Documentação técnica e recomendações de segurança.
+
+### Principais achados
+
+| Serviço | Achado |
+|---|---|
+| FTP | Login anônimo e credenciais em texto claro |
+| Telnet | Comandos transmitidos sem criptografia |
+| SSH | Sessão protegida por criptografia |
+| HTTP | Exposição de tecnologias e versões |
+| SMB | SMBv1, acesso guest e compartilhamento anônimo |
+| MySQL | Conta root acessível sem senha |
+
+## 📑 Índice
+
+- [Objetivos do Projeto](#-objetivos-do-projeto)
+- [Ambiente do Laboratório](#️-ambiente-do-laboratório)
+- [Topologia](#-topologia)
+- [Ferramentas Utilizadas](#️-ferramentas-utilizadas)
+- [Descoberta de Hosts](#-1-descoberta-de-hosts)
+- [Enumeração de Portas e Serviços](#-2-enumeração-de-portas-e-serviços)
+- [Análise FTP](#-3-análise-do-serviço-ftp)
+- [Análise Telnet](#-4-análise-do-protocolo-telnet)
+- [Telnet x SSH](#-5-comparação-entre-telnet-e-ssh)
+- [Análise HTTP](#-6-análise-do-servidor-http)
+- [Análise SMB](#-7-análise-smb)
+- [Análise MySQL](#️-8-análise-do-serviço-mysql)
+- [Conclusão](#-conclusão)
+
+## 🧰 Tecnologias
+
+![Kali Linux](https://img.shields.io/badge/Kali%20Linux-Security-blue)
+![Nmap](https://img.shields.io/badge/Nmap-Network%20Scanning-blue)
+![Wireshark](https://img.shields.io/badge/Wireshark-Traffic%20Analysis-blue)
+![VirtualBox](https://img.shields.io/badge/VirtualBox-Virtualization-blue)
+![Linux](https://img.shields.io/badge/Linux-Networking-blue)
+
 ## 📌 Objetivos do Projeto
 
 Os principais objetivos deste laboratório foram:
