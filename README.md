@@ -343,6 +343,11 @@ e respostas como:
 msfadmin
 metasploitable
 ```
+### 📸 Evidência — Telnet
+
+A captura abaixo mostra que o conteúdo da sessão Telnet pôde ser reconstruído pelo Wireshark, permitindo visualizar comandos e respostas transmitidos pela rede.
+
+![Sessão Telnet visível no Wireshark](screenshots/05-telnet-wireshark.png)
 
 ### Risco identificado
 
@@ -356,41 +361,19 @@ Desabilitar Telnet e utilizar SSH para administração remota.
 
 ---
 
-# 🔐 5. Comparação entre Telnet e SSH
+## 🔐 Comparação entre Telnet e SSH
 
-Para demonstrar a diferença entre um protocolo sem criptografia e um protocolo protegido, também foi realizada uma conexão SSH.
+### Telnet
 
-Comando:
+No Telnet, comandos e respostas puderam ser observados através da captura de tráfego.
 
-```bash
-ssh -oHostKeyAlgorithms=+ssh-rsa msfadmin@192.168.56.20
-```
+![Sessão Telnet visível no Wireshark](screenshots/05-telnet-wireshark.png)
 
-Foi necessário permitir temporariamente um algoritmo antigo porque o Metasploitable utiliza uma implementação antiga do OpenSSH.
+### SSH
 
-Essa alteração foi utilizada apenas para a conexão do laboratório.
+No SSH, os pacotes puderam ser capturados, mas o conteúdo da sessão permaneceu protegido por criptografia.
 
----
-
-## Captura SSH
-
-Foi realizada novamente uma captura utilizando Wireshark.
-
-Diferentemente do Telnet, o conteúdo da sessão SSH não apareceu em texto legível.
-
-O Wireshark conseguiu capturar os pacotes, porém informações como:
-
-```text
-whoami
-hostname
-senha
-```
-
-não puderam ser visualizadas diretamente.
-
----
-
-## Comparação
+![Sessão SSH criptografada no Wireshark](screenshots/06-ssh-wireshark.png)
 
 | Protocolo | Porta | Criptografia | Conteúdo visível no Wireshark |
 |---|---:|---|---|
