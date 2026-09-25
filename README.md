@@ -268,6 +268,11 @@ Durante a análise foi possível visualizar:
 USER anonymous
 PASS anonymous
 ```
+### 📸 Evidência
+
+A captura abaixo demonstra as credenciais FTP sendo transmitidas em texto claro durante a sessão:
+
+![Captura do Wireshark mostrando credenciais FTP em texto claro](screenshots/04-ftp-wireshark.png)
 
 Isso demonstra que o FTP tradicional transmite informações de autenticação sem criptografia.
 
