@@ -434,6 +434,12 @@ PHP/5.2.4
 WebDAV
 ```
 
+### 📸 Evidência — HTTP
+
+A captura abaixo mostra a enumeração do servidor web utilizando Nmap, curl, WhatWeb e inspeção pelo navegador.
+
+![Enumeração do serviço HTTP](screenshots/07-http-enumeration.png)
+
 Os próprios cabeçalhos HTTP revelaram informações sobre as tecnologias utilizadas pelo servidor.
 
 ---
@@ -574,6 +580,16 @@ O servidor permitiu iniciar a sessão anônima, porém negou acesso ao compartil
 NT_STATUS_ACCESS_DENIED
 ```
 
+### 📸 Evidências — SMB
+
+A captura abaixo mostra a enumeração do serviço SMB, incluindo protocolos, configurações de segurança e compartilhamentos identificados.
+
+![Enumeração do serviço SMB](screenshots/08-smb-enumeration.png)
+
+A captura seguinte demonstra a validação manual do acesso anônimo utilizando smbclient.
+
+![Acesso anônimo via SMB](screenshots/09-smb-anonymous.png)
+
 Isso demonstra que diferentes compartilhamentos podem possuir permissões distintas.
 
 ### Riscos identificados
@@ -679,6 +695,12 @@ owasp10
 tikiwiki
 tikiwiki195
 ```
+
+### 📸 Evidência — MySQL
+
+A captura abaixo demonstra a conexão ao banco utilizando a conta root sem senha e a enumeração dos bancos disponíveis.
+
+![Acesso root sem senha no MySQL](screenshots/10-mysql-root-no-password.png)
 
 Nenhum dado foi alterado ou excluído.
 
